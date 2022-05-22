@@ -5,7 +5,8 @@ const Counter=()=>{
     
     return(
   <div>
-    <h1>Counter App:{count}</h1>
+    
+  <h1 style={count%2 ? {color:"red"}:{color:"green"}}> Counter App:{count}</h1>
     <button onClick={()=> SetCount( count+1 )}>Increment</button>
     <button onClick={()=>{if(count>0){SetCount( count-1 )}}}>Decrement</button>
     <button onClick={()=>{SetCount(count*2)}}>double</button>
